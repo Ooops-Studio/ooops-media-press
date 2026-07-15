@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="leftMountain" x1="0" y1="0" x2="0.8" y2="1">
+      <stop offset="0" stop-color="#893BFF"/><stop offset="0.52" stop-color="#3F29E9"/><stop offset="1" stop-color="#0768E9"/>
+    </linearGradient>
+    <linearGradient id="rightMountain" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#91B3FF"/><stop offset="0.55" stop-color="#BED1FF"/><stop offset="1" stop-color="#72D7E0"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="0.35" cy="0.25" r="0.85">
+      <stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#E8CFFF"/>
+    </radialGradient>
+    <clipPath id="rightHalf"><rect x="512" width="512" height="1024"/></clipPath>
+  </defs>
+  <circle cx="270" cy="310" r="112" fill="url(#sun)" stroke="#FFFFFF" stroke-opacity="0.62" stroke-width="4"/>
+  <path d="M0 772 L303 405 L512 620 L512 1024 L0 1024 Z" fill="url(#leftMountain)"/>
+  <path d="M303 405 L512 620 L512 790 Z" fill="#DDA6F8" fill-opacity="0.78"/>
+  <path d="M512 738 L703 420 L1024 720 L1024 1024 L512 1024 Z" fill="url(#rightMountain)" fill-opacity="0.70"/>
+  <path d="M703 420 L744 708 L1024 720 Z" fill="#D7E1FF" fill-opacity="0.82"/>
+  <g clip-path="url(#rightHalf)" fill="#FFFFFF">
+    <path d="M512 0H640V128H512ZM768 0H896V128H768ZM640 128H768V256H640ZM896 128H1024V256H896ZM512 256H640V384H512ZM768 256H896V384H768ZM640 384H768V512H640ZM896 384H1024V512H896ZM512 512H640V640H512ZM768 512H896V640H768ZM640 640H768V768H640ZM896 640H1024V768H896ZM512 768H640V896H512ZM768 768H896V896H768ZM640 896H768V1024H640ZM896 896H1024V1024H896Z" opacity="0.23"/>
+  </g>
+</svg>

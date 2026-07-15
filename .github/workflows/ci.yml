@@ -1,0 +1,48 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: macos-26
+    steps:
+      - uses: actions/checkout@v4
+      - name: Select Xcode 26
+        shell: bash
+        run: |
+          shopt -s nullglob
+          candidates=(/Applications/Xcode_26*.app)
+          if (( ${#candidates[@]} > 0 )); then
+            selected="${candidates[${#candidates[@]}-1]}"
+            sudo xcode-select -s "$selected/Contents/Developer"
+          fi
+          xcodebuild -version
+      - name: Resolve dependencies
+        run: swift package resolve
+      - name: Build arm64
+        run: swift build --arch arm64
+      - name: Test
+        run: swift test --arch arm64
+      - name: License files
+        run: |
+          test -f LICENSE
+          test -f THIRD_PARTY_NOTICES.md
+          test -s Sources/OoopsMediaPress/Resources/SVGO/LICENSE.txt
+          test "$(cat Sources/OoopsMediaPress/Resources/SVGO/VERSION)" = 4.0.1
+          test -s Sources/OoopsMediaPress/Resources/SVGO/svgo.bundle.js
+          grep -q -- '--enable-libvpx' scripts/build-ffmpeg.sh
+          grep -q -- '--enable-libopus' scripts/build-ffmpeg.sh
+          grep -q 'libvpx' THIRD_PARTY_NOTICES.md
+          grep -q 'libopus' THIRD_PARTY_NOTICES.md
+      - name: App icon
+        run: |
+          test -s Resources/AppIcon.icns
+          test "$(/usr/libexec/PlistBuddy -c 'Print :CFBundleIconFile' Support/Info.plist)" = AppIcon
+          iconutil --convert iconset --output "$RUNNER_TEMP/AppIcon.iconset" Resources/AppIcon.icns
+      - name: Sparkle configuration
+        run: |
+          test "$(/usr/libexec/PlistBuddy -c 'Print :SURequireSignedFeed' Support/Info.plist)" = true
+          test "$(/usr/libexec/PlistBuddy -c 'Print :SUVerifyUpdateBeforeExtraction' Support/Info.plist)" = true
+          xmllint --noout docs/appcast.xml

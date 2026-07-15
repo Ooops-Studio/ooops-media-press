@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleDevelopmentRegion</key><string>en</string>
+    <key>CFBundleDisplayName</key><string>Ooops Media Press</string>
+    <key>CFBundleExecutable</key><string>OoopsMediaPress</string>
+    <key>CFBundleIconFile</key><string>AppIcon</string>
+    <key>CFBundleIdentifier</key><string>studio.ooops.OoopsMediaPress</string>
+    <key>CFBundleInfoDictionaryVersion</key><string>6.0</string>
+    <key>CFBundleName</key><string>Ooops Media Press</string>
+    <key>CFBundlePackageType</key><string>APPL</string>
+    <key>CFBundleShortVersionString</key><string>0.1.0</string>
+    <key>CFBundleVersion</key><string>1</string>
+    <key>LSMinimumSystemVersion</key><string>11.0</string>
+    <key>LSArchitecturePriority</key><array><string>arm64</string></array>
+    <key>NSHighResolutionCapable</key><true/>
+    <key>SUFeedURL</key><string>https://ooops-studio.github.io/ooops-media-press/appcast.xml</string>
+    <key>SUPublicEDKey</key><string>b9mdK5erL74TDmSCOOL9A/aOjbD/J3sj40wt3WMZ1+w=</string>
+    <key>SUEnableAutomaticChecks</key><true/>
+    <key>SURequireSignedFeed</key><true/>
+    <key>SUVerifyUpdateBeforeExtraction</key><true/>
+</dict>
+</plist>

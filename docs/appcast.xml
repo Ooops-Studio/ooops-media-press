@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle">
+  <channel>
+    <title>Ooops Media Press Updates</title>
+    <link>https://ooops-studio.github.io/ooops-media-press/appcast.xml</link>
+    <description>Stable updates for Ooops Media Press.</description>
+    <language>en</language>
+  </channel>
+</rss>

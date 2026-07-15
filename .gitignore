@@ -1,0 +1,9 @@
+.build/
+build/
+work/
+outputs/
+*.xcuserstate
+.DS_Store
+Sources/OoopsMediaPress/Resources/Tools/ffmpeg
+Sources/OoopsMediaPress/Resources/Tools/ffprobe
+release-artifacts/

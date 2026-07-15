@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="leftBackground" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#B86CFF"/>
+      <stop offset="0.46" stop-color="#8848F7"/>
+      <stop offset="1" stop-color="#116DF5"/>
+    </linearGradient>
+    <linearGradient id="rightBackground" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#E8E9FF"/>
+      <stop offset="0.55" stop-color="#F6F8FF"/>
+      <stop offset="1" stop-color="#C7F8F1"/>
+    </linearGradient>
+    <linearGradient id="leftMountain" x1="0" y1="0" x2="0.8" y2="1">
+      <stop offset="0" stop-color="#893BFF"/>
+      <stop offset="0.52" stop-color="#3F29E9"/>
+      <stop offset="1" stop-color="#0768E9"/>
+    </linearGradient>
+    <linearGradient id="rightMountain" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#91B3FF"/>
+      <stop offset="0.55" stop-color="#BED1FF"/>
+      <stop offset="1" stop-color="#72D7E0"/>
+    </linearGradient>
+    <linearGradient id="rim" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#EEE6FF"/>
+      <stop offset="0.38" stop-color="#9A7BFF"/>
+      <stop offset="0.7" stop-color="#A6C6FF"/>
+      <stop offset="1" stop-color="#79F2DB"/>
+    </linearGradient>
+    <linearGradient id="grip" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#62EFC0"/>
+      <stop offset="1" stop-color="#20CFAE"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="0.35" cy="0.25" r="0.85">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#E8CFFF"/>
+    </radialGradient>
+    <clipPath id="tileClip"><rect x="512" y="88" width="424" height="848" rx="124"/></clipPath>
+    <clipPath id="iconClip"><rect x="88" y="88" width="848" height="848" rx="196"/></clipPath>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="180%">
+      <feDropShadow dx="0" dy="24" stdDeviation="28" flood-color="#322176" flood-opacity="0.28"/>
+    </filter>
+    <filter id="handleShadow" x="-60%" y="-50%" width="220%" height="230%">
+      <feDropShadow dx="0" dy="15" stdDeviation="14" flood-color="#44358B" flood-opacity="0.34"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#shadow)">
+    <rect x="74" y="74" width="876" height="876" rx="214" fill="url(#rim)"/>
+    <g clip-path="url(#iconClip)">
+      <rect x="88" y="88" width="424" height="848" fill="url(#leftBackground)"/>
+      <rect x="512" y="88" width="424" height="848" fill="url(#rightBackground)"/>
+
+      <circle cx="294" cy="331" r="101" fill="url(#sun)" stroke="#FFFFFF" stroke-opacity="0.62" stroke-width="4"/>
+      <path d="M88 730 L326 440 L512 630 L512 936 L88 936 Z" fill="url(#leftMountain)"/>
+      <path d="M326 440 L512 630 L512 766 Z" fill="#DDA6F8" fill-opacity="0.78"/>
+
+      <path d="M512 687 L670 452 L936 696 L936 936 L512 936 Z" fill="url(#rightMountain)" fill-opacity="0.70"/>
+      <path d="M670 452 L704 686 L936 696 Z" fill="#D7E1FF" fill-opacity="0.82"/>
+
+      <g clip-path="url(#tileClip)" fill="#FFFFFF">
+        <rect x="512" y="88" width="106" height="106" opacity="0.17"/>
+        <rect x="724" y="88" width="106" height="106" opacity="0.28"/>
+        <rect x="618" y="194" width="106" height="106" opacity="0.23"/>
+        <rect x="830" y="194" width="106" height="106" opacity="0.32"/>
+        <rect x="512" y="300" width="106" height="106" opacity="0.26"/>
+        <rect x="724" y="300" width="106" height="106" opacity="0.19"/>
+        <rect x="618" y="406" width="106" height="106" opacity="0.30"/>
+        <rect x="830" y="406" width="106" height="106" opacity="0.21"/>
+        <rect x="512" y="512" width="106" height="106" opacity="0.18"/>
+        <rect x="724" y="512" width="106" height="106" opacity="0.28"/>
+        <rect x="618" y="618" width="106" height="106" opacity="0.23"/>
+        <rect x="830" y="618" width="106" height="106" opacity="0.31"/>
+        <rect x="512" y="724" width="106" height="106" opacity="0.27"/>
+        <rect x="724" y="724" width="106" height="106" opacity="0.18"/>
+        <rect x="618" y="830" width="106" height="106" opacity="0.30"/>
+        <rect x="830" y="830" width="106" height="106" opacity="0.22"/>
+      </g>
+    </g>
+
+    <rect x="88" y="88" width="848" height="848" rx="196" fill="none" stroke="#FFFFFF" stroke-opacity="0.72" stroke-width="7"/>
+    <path d="M512 89 V935" stroke="#FFFFFF" stroke-opacity="0.78" stroke-width="18"/>
+    <path d="M512 89 V935" stroke="#8795D5" stroke-opacity="0.38" stroke-width="3"/>
+  </g>
+
+  <g filter="url(#handleShadow)">
+    <rect x="444" y="409" width="136" height="206" rx="55" fill="#DDE2FB" fill-opacity="0.85"/>
+    <rect x="448" y="397" width="128" height="202" rx="52" fill="#FFFFFF"/>
+    <rect x="456" y="405" width="112" height="180" rx="45" fill="#F8FAFF" stroke="#FFFFFF" stroke-width="4"/>
+    <rect x="478" y="466" width="14" height="58" rx="7" fill="url(#grip)"/>
+    <rect x="505" y="466" width="14" height="58" rx="7" fill="url(#grip)"/>
+    <rect x="532" y="466" width="14" height="58" rx="7" fill="url(#grip)"/>
+  </g>
+</svg>
